@@ -23,18 +23,21 @@ const SignupScreen: React.FC<{ navigation: any }> = ({ navigation }) => {
       <TextInput
         style={styles.input}
         placeholder="First Name"
+        placeholderTextColor="#F0F8FF"
         value={firstName}
         onChangeText={setFirstName}
       />
       <TextInput
         style={styles.input}
         placeholder="Last Name"
+        placeholderTextColor="#F0F8FF"
         value={lastName}
         onChangeText={setLastName}
       />
       <TextInput
         style={styles.input}
         placeholder="Email"
+        placeholderTextColor="#F0F8FF"
         value={email}
         onChangeText={setEmail}
         keyboardType="email-address"
@@ -42,11 +45,14 @@ const SignupScreen: React.FC<{ navigation: any }> = ({ navigation }) => {
       <TextInput
         style={styles.input}
         placeholder="Password"
+        placeholderTextColor="#F0F8FF"
         value={password}
         onChangeText={setPassword}
         secureTextEntry
       />
-      <Button title="Sign Up" onPress={handleSignup} />
+      <View style={styles.register}>
+        <Button title="Sign Up" color="#fdba74" onPress={handleSignup} />
+      </View>
     </View>
   );
 };
@@ -55,12 +61,19 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 20,
+    backgroundColor: "#fdba74",
   },
   input: {
     height: 40,
-    borderColor: "gray",
+    borderColor: "#eef2ff",
     borderBottomWidth: 1,
     marginBottom: 20,
+  },
+  register: {
+    backgroundColor: "#F0F8FF",
+    borderRadius: 10,
+    padding: 10,
+    marginTop: 20,
   },
 });
 
