@@ -21,6 +21,7 @@ const LoginScreen: React.FC<{ navigation: any }> = ({ navigation }) => {
       <TextInput
         style={styles.input}
         placeholder="Email"
+        placeholderTextColor="#F0F8FF"
         value={email}
         onChangeText={setEmail}
         keyboardType="email-address"
@@ -28,18 +29,19 @@ const LoginScreen: React.FC<{ navigation: any }> = ({ navigation }) => {
       <TextInput
         style={styles.input}
         placeholder="Password"
+        placeholderTextColor="#F0F8FF"
         value={password}
         onChangeText={setPassword}
         secureTextEntry
       />
-      <Button title="Login" onPress={handleLogin} />
-
+      <View style={styles.login} >
+        <Button title="Login" color ="#fdba74" onPress={handleLogin} />
+      </View>
       <TouchableOpacity onPress={() => navigation.navigate("Signup")}>
         <Text style={styles.signupLink}>
           Don't have an account? Sign up here
         </Text>
-          </TouchableOpacity>
-          
+      </TouchableOpacity>
     </View>
   );
 };
@@ -48,17 +50,28 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 20,
+    backgroundColor: "#fdba74",
   },
   input: {
     height: 40,
-    borderColor: "gray",
+    borderColor: "#eef2ff",
+    color: "#F0F8FF",
+    fontSize: 16,
     borderBottomWidth: 1,
     marginBottom: 20,
   },
   signupLink: {
     marginTop: 20,
-    color: "blue",
+    color: "#F0F8FF",
+    fontSize: 16,
+    fontWeight: "bold",
     textAlign: "center",
+  },
+  login: {
+    backgroundColor: "#F0F8FF",
+    borderRadius: 10,
+    padding: 10,
+    marginTop: 20,
   },
 });
 

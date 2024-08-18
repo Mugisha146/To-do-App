@@ -8,7 +8,7 @@ import {
   StyleSheet,
   TouchableOpacity,
 } from "react-native";
-import { fetchTasks, addTask, updateTask, deleteTask } from "../services/api";
+import { fetchTasks, addTask, updateTask, deleteTask, logout } from "../services/api";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 
 interface Task {
@@ -94,20 +94,27 @@ const TaskList: React.FC<{ navigation: any }> = ({ navigation }) => {
 
   return (
     <View style={styles.container}>
-      <TextInput
-        style={styles.input}
-        placeholder="Task Title"
-        value={newTaskTitle}
-        onChangeText={setNewTaskTitle}
-      />
-      <TextInput
-        style={styles.input}
-        placeholder="Task Description"
-        value={newTaskDescription}
-        onChangeText={setNewTaskDescription}
-      />
-      <Button title="Create Task" onPress={handleCreateTask} />
-
+        <TextInput
+          style={styles.input}
+          placeholder="Task Title"
+          placeholderTextColor="#F0F8FF"
+          value={newTaskTitle}
+          onChangeText={setNewTaskTitle}
+        />
+        <TextInput
+          style={styles.input}
+          placeholder="Task Description"
+          placeholderTextColor="#F0F8FF"
+          value={newTaskDescription}
+          onChangeText={setNewTaskDescription}
+        />
+        <View style={styles.NewTasks}>
+          <Button
+            title="Create Task"
+            color="#fdba74"
+            onPress={handleCreateTask}
+          />
+        </View>
       <FlatList
         data={tasks}
         keyExtractor={(item) => item.id.toString()}
@@ -137,7 +144,9 @@ const TaskList: React.FC<{ navigation: any }> = ({ navigation }) => {
           </View>
         )}
       />
-      <Button title="Logout" onPress={handleLogout} />
+      <View style={styles.logout}>
+        <Button title="Logout" color="#fdba74"  onPress={handleLogout} />
+      </View>
     </View>
   );
 };
@@ -146,15 +155,19 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 20,
+    backgroundColor: "#fdba74",
   },
   taskContainer: {
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
+    flexWrap: "wrap",
     marginBottom: 10,
   },
   taskText: {
     fontSize: 16,
+    fontWeight: "bold",
+    marginTop:10,
   },
   descriptionText: {
     fontSize: 14,
@@ -162,20 +175,36 @@ const styles = StyleSheet.create({
   },
   timeText: {
     fontSize: 12,
-    color: "gray",
+    color: "#F0F8FF",
   },
   completed: {
     textDecorationLine: "line-through",
   },
   button: {
-    color: "blue",
+    fontSize: 16,
+    fontWeight: "bold",
+    color: "#F0F8FF",
+    padding: 10,
+    borderRadius: 10,
     marginLeft: 10,
   },
   input: {
     height: 40,
-    borderColor: "gray",
+    borderColor: "#F0F8FF",
     borderBottomWidth: 1,
     marginBottom: 10,
+  },
+  NewTasks: {
+    backgroundColor: "#F0F8FF",
+    borderRadius: 10,
+    padding: 10,
+    marginTop: 20,
+    marginBottom: 40,
+  },
+  logout: {
+    backgroundColor: "#F0F8FF",
+    borderRadius: 10,
+    padding: 10,
   },
 });
 
