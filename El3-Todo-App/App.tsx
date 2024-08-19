@@ -1,5 +1,5 @@
 import React from "react";
-import { SafeAreaView, StyleSheet } from "react-native";
+import { SafeAreaView, StyleSheet, StatusBar } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import TaskList from "./components/TaskList";
@@ -12,6 +12,7 @@ const Stack = createStackNavigator();
 const App: React.FC = () => {
   return (
     <SafeAreaView style={styles.container}>
+      <StatusBar barStyle="dark-content" />
       <NavigationContainer>
         <AuthProvider>
           <Stack.Navigator initialRouteName="Login">
@@ -28,7 +29,7 @@ const App: React.FC = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#F0F8FF",
+    backgroundColor: "#FFF",
   },
 });
 
