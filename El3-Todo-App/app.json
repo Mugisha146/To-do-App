@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "El3-Todo-App",
-    "slug": "El3-Todo-App",
+    "name": "ElTask App",
+    "slug": "eltask-app",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
