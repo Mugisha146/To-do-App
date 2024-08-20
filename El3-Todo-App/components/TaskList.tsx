@@ -283,7 +283,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
   },
   createButton: {
-    backgroundColor: "#60a5fa",
+    backgroundColor: "#475569",
     paddingVertical: 12,
     borderRadius: 8,
     alignItems: "center",
@@ -335,9 +335,9 @@ const styles = StyleSheet.create({
   actionButton: {
     paddingVertical: 8,
     paddingHorizontal: 12,
-    backgroundColor: "#60a5fa",
+    backgroundColor: "#475569",
     borderRadius: 8,
-    marginLeft: 10,
+    marginRight: 55,
   },
   actionButtonText: {
     color: "#FFF",
