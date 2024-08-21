@@ -8,7 +8,7 @@ To-do Mobile Application/ React Native project
 - [Technologies Used](#technologies-used)
 - [Contributing](#contributing)
 
-  # Introduction
+# Introduction
   
 Welcome to the To-do App called ElTask App This App serves as Secure Task management. It provides efficient way to manage any tasklist until completed, it's secure and built with React Native with Typescript, To-do API.
 
@@ -21,8 +21,8 @@ Install on a test device
 
 # How to install and test it on Android
 
-  1.Open the URL below to install it on a device:[Link](https://expo.dev/accounts/el3/projects/eltask-app/builds/d6525f2c-79d5-4bf1-b94a-372b68ff8897)
-  2.Click install then enjoy it
+  - Open the URL below to install it on a device:[Link](https://expo.dev/accounts/el3/projects/eltask-app/builds/d6525f2c-79d5-4bf1-b94a-372b68ff8897)
+  - Click install
 
 # How to install and test it on IOS
 
